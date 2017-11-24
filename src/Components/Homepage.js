@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Navbar} from 'react-bootstrap';
 
 class Homepage extends Component {
   render() {
