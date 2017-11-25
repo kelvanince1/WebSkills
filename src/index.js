@@ -5,6 +5,7 @@ import 'react-bootstrap';
 
 import Homepage from './Components/Homepage';
 import SkillsPage from './Components/SkillsPage';
+import OtherUserSkills from './Components/OtherUserSkills';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
@@ -12,6 +13,7 @@ ReactDOM.render(
     <div>
       <Route exact path="/" component={Homepage} />
       <Route exact path="/skills" component={SkillsPage} />
+      <Route exact path="/othersskills" component={OtherUsersSkills} />
     </div>
   </BrowserRouter>,
   document.getElementById('root'));
