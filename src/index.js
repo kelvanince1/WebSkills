@@ -4,7 +4,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import 'react-bootstrap';
 
 import Homepage from './Components/Homepage';
-import SkillsPage from './Components/Skillspage';
+import SkillsPage from './Components/SkillsPage';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
