@@ -9,6 +9,7 @@ import Header from './Header';
 
 //Homepage component. Acts as a kind of splash page for the users.
 class Homepage extends Component {
+
   render() {
     return (
       <div>
