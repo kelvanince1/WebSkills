@@ -5,7 +5,7 @@ import 'react-bootstrap';
 
 import Homepage from './Components/Homepage';
 import SkillsPage from './Components/SkillsPage';
-import OtherUserSkills from './Components/OtherUserSkills';
+import OtherUsersSkills from './Components/OtherUsersSkills';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
