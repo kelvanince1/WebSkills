@@ -6,9 +6,11 @@ import { Button } from 'react-bootstrap';
 class SkillsPage extends Component {
   render() {
     return (
-      <div>
+      <div className="text-xs-right">
+        <div>
+          <Button bsStyle="primary">Add Skill</Button>
+        </div>
         <h3>SkillsPage</h3>
-        <Button bsStyle="primary">Add Skill</Button>
       </div>
     )
   }

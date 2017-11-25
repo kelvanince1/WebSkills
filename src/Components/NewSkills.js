@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class NewSkills extends Component {
   render() {
     return (
-      <div>Create skill</div>
+      <h3>Create skill</h3>
     )
   }
 }
