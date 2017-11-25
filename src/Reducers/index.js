@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 import { reducer as form } from 'redux-form';
-import skills from './Skills';
+// import skills from './Skills';
 
-const rootReducer = combineReducers({
-  skills: skills
+const indexReducer = combineReducers({
+  form
 });
 
-export default rootReducer;
+export default indexReducer;
