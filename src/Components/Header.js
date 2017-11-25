@@ -3,7 +3,9 @@ import React, { Component } from 'react';
 class Header extends Component {
   render() {
     return (
-      <h2>Hellloooooo</h2>
+      <nav className="jumbotron">
+        <h2>Hello</h2>
+      </nav>
     )
   }
 }
