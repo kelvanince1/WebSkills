@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
-import {Navbar, NavItem, Nav} from 'react-bootstrap';
+import { BrowserRouter, Route } from 'react-router-dom';
+
+import Loginpage from './Loginpage';
+import SkillsPage from './Skillspage';
 
 class Homepage extends Component {
   render() {
     return (
-      <Navbar>
-        <Nav>
-          <NavItem>Home</NavItem>
-          <NavItem>Skills</NavItem>
-        </Nav>
-      </Navbar>,
       <div>
         <h3>Hello Username</h3>
         <h4>See your skills or endorse someone elses</h4>
