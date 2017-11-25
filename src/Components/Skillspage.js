@@ -43,7 +43,7 @@ class SkillsPage extends Component {
      }
    }
 
-   
+
   render() {
     return (
       <div className="text-xs-right">
@@ -57,6 +57,10 @@ class SkillsPage extends Component {
       </div>
     )
   }
-}
+};
 
-export default SkillsPage;
+const mapStateToProps = (state) => ({
+  ...state.skillsAction
+});
+
+export default connect(mapStateToProps, {skillsAction})(SkillsPage);
