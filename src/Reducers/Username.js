@@ -1,15 +1,15 @@
-import { FETCH_SKILLS } from '../Actions/ActionTypes';
+import { FETCH_USER } from '../Actions/ActionTypes';
 
 const initialState = {
-  skills: []
+  username: ''
 }
 
 export default function(state = initialState, action) {
   switch (action.type) {
-    case FETCH_SKILLS:
+    case FETCH_USER:
       return {
          ...state,
-         skills: action.skills
+         username: action.username
       };
     default:
       return state;
