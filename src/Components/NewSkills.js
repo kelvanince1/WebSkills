@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import AWS from 'aws-sdk';
+import { reduxForm } from 'redux-form';
+// import AWS from 'aws-sdk';
 // import {Button } from 'react-bootstrap';
 // import { Link } from 'react-router-dom';
 //
@@ -34,10 +35,27 @@ class NewSkills extends Component {
 
   render() {
     return (
-      <Header />,
-      <h3>New Skills</h3>
+      <div>
+        <Header />
+        <form>
+          <h3>New Skill</h3>
+          <div className='form-group'>
+            <label>Username</label>
+            <input type='text' className='form-control' />
+          </div>
+
+          <div className='form-group'>
+            <label>Skill</label>
+            <input type='text' className='form-control' />
+          </div>
+          <button type='submit' className='btn btn-primary'>Submit</button>
+        </form>
+      </div>
     );
   }
 }
 
-export default NewSkills;
+export default reduxForm({
+  form: 'skillsNewForm',
+  fields: ['username', 'skills']
+})(NewSkills);
