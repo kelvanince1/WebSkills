@@ -3,37 +3,10 @@ import { Link } from 'react-router-dom';
 import {connect} from 'react-redux';
 
 import Header from './Header';
-import { skillsAction } from '../Actions/Skills';
 
 // This is the users own skills page. They can view their exisiting
 // skills as well as create new ones.
 class SkillsPage extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      skills: []
-    }
-  };
-
-  componentWillMount() {
-    skillsAction();
-    console.log(this.props.skills);
-  };
-
-  // filterSkills = (payload) => {
-  //     if (payload) {
-  //        return payload
-  //     }
-  //  };
-
-   // handleOnTouchTap = (skill) => {
-   //    this.setState({
-   //       selectedSkill: skill
-   //    },
-   //       this.props.toggleModal
-   //     )
-   // };
 
    renderTable = (payload) => {
      if(payload) {
@@ -59,8 +32,4 @@ class SkillsPage extends Component {
   }
 };
 
-const mapStateToProps = (state) => ({
-  ...state.skillsAction
-});
-
-export default connect(mapStateToProps, {skillsAction})(SkillsPage);
+export default SkillsPage;
