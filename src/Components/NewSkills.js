@@ -12,11 +12,13 @@ class NewSkills extends Component {
     super(props);
 
     this.state = {
-      skill: ''
+      skill: '',
+      username: ''
     }
   };
 
   handleSubmit = () => {
+    console.log()
     var params = {
       TableName: 'Skills',
       Item: {
@@ -34,12 +36,13 @@ class NewSkills extends Component {
     });
   };
 
-  handleSkill = (event) => this.setState({skill: event.target.value});
+  // handleUsername = (event) => this.setState({username: event.target.value});
+  // handleSkill = (event) => this.setState({skill: event.value});
 
   render() {
-    console.log(this.state.skill);
     return (
       <form>
+
         <fieldset className="form-group">
           <label>Skill:</label>
           <input className="form-control" />
