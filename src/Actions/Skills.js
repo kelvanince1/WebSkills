@@ -1,15 +1,14 @@
-import { FETCH_SKILLS } from './ActionTypes';
+import { SKILLS_DATA } from './ActionTypes';
 
-export const skillsAction = () => ({type: FETCH_SKILLS});
+// Asynchronously await updates in the URL endpoint. When a new item is added,
+// grab it and pull it into the app.
 
-// export function createSkill(props) {
-//
-// }
+// This data will be passed through to the components as State.
+export const skillsData = () => async dispatch => {
+  const resWithId = await fetch(``);
+  // const json = await res.json();
+  const jsonWithId = await resWithId.json();
+  const jsonWithIdShift = jsonWithId.Items.shift();
 
-// export const getUserSkills = () => async dispatch => {
-//   const res = await fetch('');
-//   let json = await res.json();
-//   json = json.Items.shift();
-//
-//   dispatch({type: GET_SKILLS, payload: json});
-// }
+  // dispatch({type: actionTypes.SKILLS_DATA, payload: jsonWithId});
+}
