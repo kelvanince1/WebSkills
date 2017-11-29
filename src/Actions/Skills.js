@@ -10,5 +10,5 @@ export const skillsData = () => async dispatch => {
 
   console.log('Data is ', json);
 
-  // dispatch({type: actionTypes.SKILLS_DATA, payload: jsonWithId});
+  dispatch({type: SKILLS_DATA, payload: json});
 }
