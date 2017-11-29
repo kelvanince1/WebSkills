@@ -19,7 +19,7 @@ class Homepage extends Component {
    };
 
    componentWillMount() {
-     this.props.skillsData;
+     this.props.skillsData();
 
    }
 
