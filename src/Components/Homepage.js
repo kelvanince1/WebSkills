@@ -5,19 +5,23 @@ import {Button } from 'react-bootstrap';
 
 import Header from './Header';
 import { skillsData } from '../Actions/Skills';
+import {skillsProfile} from '../Reducers/index'
 // I am using React-Bootstrap for some styling.
 // Url: https://react-bootstrap.github.io/components.html
 
 //Homepage component. Acts as a kind of splash page for the users.
 class Homepage extends Component {
 
-  componentWillMount() {
-    this.props.skillsData();
-  }
+  componentWillReceiveProps(nextProps) {
+      let userObj = nextProps.payload;
+      this.props.skillsData;
+      console.log(nextProps.payload);
+   };
 
-  componentWillReciveProps(nextProps) {
-    this.props.ticketData();
-  }
+   componentWillMount() {
+     this.props.skillsData;
+
+   }
 
   render() {
     return (
@@ -32,7 +36,9 @@ class Homepage extends Component {
 }
 
 const mapStateToProps = (state) => ({
+  ...state.skillsProfile,
   ...state.skillsData,
+  payload: state.skillsProfile.payload
 });
 
 export default connect(mapStateToProps, {skillsData})(Homepage);

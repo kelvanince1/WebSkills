@@ -1,4 +1,4 @@
-import { SKILLS_DATA } from '../Actions/Skills';
+import { SKILLS_DATA } from '../Actions/ActionTypes';
 
 const initialState = {
   payload: []
@@ -11,5 +11,7 @@ export default function skillsProfile(state = initialState, action) {
         ...state,
         payload: action.payload
       }
+    default:
+      return state
   }
 }
