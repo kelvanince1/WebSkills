@@ -30,8 +30,8 @@ class SkillsPage extends Component {
    renderSkills() {
      return _.map(this.props.payload, skill => {
        return (
-         <li className='list-group-item' key={skill.username}>
-          {skill.username}
+         <li className='list-group-item' key={skill}>
+          {this.props.payload.username}
          </li>
        )
      })
