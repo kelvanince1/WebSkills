@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import {connect} from 'react-redux';
+import { Link } from 'react-router-dom';
 import _ from 'lodash';
 
 import Header from './Header';
@@ -9,7 +9,7 @@ import {skillsProfile} from '../Reducers/index';
 
 // This is the users own skills page. They can view their exisiting
 // skills as well as create new ones.
-class SkillsPage extends Component {
+class Usernames extends Component {
   constructor(props) {
     super(props);
 
@@ -31,7 +31,7 @@ class SkillsPage extends Component {
      return _.map(this.props.payload, skill => {
        return (
          <li className='list-group-item' key={skill}>
-          {this.props.payload.username}
+          <Link to='/skills'>{this.props.payload.username}</Link>
          </li>
        )
      })
@@ -42,12 +42,7 @@ class SkillsPage extends Component {
     return (
       <div className="text-xs-right">
         <Header />
-        <div style={{ float: 'right' }}>
-          <Link to="/newskill" className="btn btn-primary">
-            Add a skill
-          </Link>
-        </div>
-        <h3>SkillsPage</h3>
+        <h3>Which user would you like to see</h3>
         <ul className='list-group'>
           {this.renderSkills()}
         </ul>
@@ -62,4 +57,4 @@ const mapStateToProps = (state) => ({
   payload: state.skillsProfile.payload
 });
 
-export default connect(mapStateToProps, {skillsData})(SkillsPage);
+export default connect(mapStateToProps, {skillsData})(Usernames);

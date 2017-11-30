@@ -3,13 +3,11 @@ import { Link } from 'react-router-dom';
 import {Button } from 'react-bootstrap';
 
 import Header from './Header';
-
 // I am using React-Bootstrap for some styling.
 // Url: https://react-bootstrap.github.io/components.html
 
 //Homepage component. Acts as a kind of splash page for the users.
 class Homepage extends Component {
-
   render() {
     return (
       <div>

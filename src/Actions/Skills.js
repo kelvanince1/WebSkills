@@ -5,10 +5,11 @@ import { SKILLS_DATA } from './ActionTypes';
 
 // This data will be passed through to the components as State.
 export const skillsData = () => async dispatch => {
-  const resWithId = await fetch(``);
-  // const json = await res.json();
-  const jsonWithId = await resWithId.json();
-  const jsonWithIdShift = jsonWithId.Items.shift();
+  const username = 'kelvanince';
+  const res = await fetch(`http://skills.us-east-1.elasticbeanstalk.com/skills/${username}`);
+  let json = await res.json();
+  json = json.Items.shift();
 
-  // dispatch({type: actionTypes.SKILLS_DATA, payload: jsonWithId});
+
+  dispatch({type: SKILLS_DATA, payload: json});
 }
