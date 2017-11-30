@@ -6,9 +6,10 @@ import { Field, reduxForm } from 'redux-form';
 import Header from './Header';
 
 class NewSkills extends Component {
-  renderSkillField(field) {
+  renderField(field) {
     return (
-      <div>
+      <div className='form-group'>
+        <label>{field.label}</label>
         <input
           type='text'
           {...field.input}
@@ -23,8 +24,14 @@ class NewSkills extends Component {
         <Header />
         <form>
           <Field
+            label='Username'
+            name='Username'
+            component={this.renderField}
+          />
+          <Field
+            label='Skill'
             name='Skill'
-            component={this.renderSkillField}
+            component={this.renderField}
           />
         </form>
       </div>
