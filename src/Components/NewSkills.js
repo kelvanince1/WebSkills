@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import { connect } from 'react-redux';
 import { Field, reduxForm } from 'redux-form';
 import AWS from 'aws-sdk';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 //
 import Header from './Header';
 
@@ -10,7 +10,7 @@ AWS.config.update({
   region: 'us-east-1'
 });
 
-AWS.config.credentials = new AWS.Credentials({accessKeyId: process.env.REACT_APP_ACCESS_KEY, secretAccessKey: process.env.REACT_APP_SECRET_KEY});
+AWS.config.credentials = new AWS.Credentials({accessKeyId: process.env.ACCESS_KEY, secretAccessKey: process.env.SECRET_KEY});
 
 var ddb = new AWS.DynamoDB.DocumentClient();
 
@@ -45,13 +45,13 @@ class NewSkills extends Component {
          }
        });
 
-     ddb.update(dynamoParams, function(err, data) {
-       if (err) {
-         console.log("Error", err);
-       } else {
-         console.log("Success", data);
-       }
-     });
+   ddb.update(dynamoParams, function(err, data) {
+     if (err) {
+       console.log("Error", err);
+     } else {
+       console.log("Success", data);
+     }
+   });
   }
 
   render() {
